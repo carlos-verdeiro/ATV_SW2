@@ -15,6 +15,12 @@
     margin: 0;
 }
 
+.active{
+    font-weight: 700;
+    font-size: 30px !important;
+    color: var(--cor1) !important;
+}
+
 nav {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--cor4);

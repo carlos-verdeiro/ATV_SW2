@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="assets/css/index.css">
     <title>Menu principal</title>
 </head>
@@ -15,7 +14,7 @@
             <h1>MENU</h1>
             <div id="divNav1">
                 <ul id="linksPages">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php" class="active">Home</a></li>
                     <li><a href="pages/multa.php">Multa</a></li>
                     <li><a href="pages/primos.php">Primos</a></li>
                     <li><a href="pages/imc.php">IMC</a></li>
