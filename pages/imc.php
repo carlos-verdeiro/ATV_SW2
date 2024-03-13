@@ -37,9 +37,9 @@
                 </div>
                 <div class="inputContainer" id="iCAltura">
                     <label for="altura">Altura:</label>
-                    <input type="number" name="altura" id="altura" min="0.1 " required class>
+                    <input type="number" name="altura" id="altura" min="0.1 " required>
                 </div>
-                <input type="submit" value="dsd"class="submit">
+                <input type="submit" value="Calcular"class="submit">
             </form>
         </section>
     </main>
