@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/custom.css">
     <title>IMC</title>
 </head>
 
@@ -19,16 +19,33 @@
                     <li><a href="primos.php">Primos</a></li>
                     <li><a href="imc.php" class="active">IMC</a></li>
                     <li><a href="temperaturas.php">Temperaturas</a></li>
-
                 </ul>
                 <ul id="linksDev">
-                    <li><a href="https://github.com/carlos-verdeiro" target="_blank"><?php include "../assets/img/github.svg"?></a></li>
-                    <li><a href="https://www.linkedin.com/in/carlos-daniel-verdeiro/" target="_blank"><?php include "../assets/img/linkedin.svg"?></a></li>
-                    <li><a href="https://carlos-verdeiro.github.io/" target="_blank"><?php include "../assets/img/web.svg"?></a></li>
+                    <li><a href="https://github.com/carlos-verdeiro" target="_blank"><?php include "../assets/img/github.svg" ?></a></li>
+                    <li><a href="https://www.linkedin.com/in/carlos-daniel-verdeiro/" target="_blank"><?php include "../assets/img/linkedin.svg" ?></a></li>
+                    <li><a href="https://carlos-verdeiro.github.io/" target="_blank"><?php include "../assets/img/web.svg" ?></a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <main class="main">
+        <section class="section">
+            <form action="imc.php" method="get" class="form">
+                <div class="inputContainer" id="iCPeso">
+                    <label for="peso">Peso:</label>
+                    <input type="number" name="peso" id="peso" min="0.1 " required>
+                </div>
+                <div class="inputContainer" id="iCAltura">
+                    <label for="altura">Altura:</label>
+                    <input type="number" name="altura" id="altura" min="0.1 " required>
+                </div>
+                <input type="submit" value="dsd">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>Desenvolvido por Carlos Daniel Verdeiro &copy; - 2024 Sistema Web 2</h3>
+    </footer>
 </body>
 
 </html>
