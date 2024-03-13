@@ -1,4 +1,5 @@
 @import url("nav.css");
+@import url("footer.css");
 
 :root {
     --cor1: #0f2736;
@@ -7,10 +8,21 @@
     --cor4: #57cc99;
     --cor5: #80ed99;
     --cor6: #c7f9cc;
+    --cor7: #edfdef;
 
 }
 
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: var(--cor6);
+
+    main{
+        width: 100vw;
+        height: 75vh;
+    }
 }

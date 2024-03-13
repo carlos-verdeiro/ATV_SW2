@@ -37,15 +37,13 @@
                 </div>
                 <div class="inputContainer" id="iCAltura">
                     <label for="altura">Altura:</label>
-                    <input type="number" name="altura" id="altura" min="0.1 " required>
+                    <input type="number" name="altura" id="altura" min="0.1 " required class>
                 </div>
-                <input type="submit" value="dsd">
+                <input type="submit" value="dsd"class="submit">
             </form>
         </section>
     </main>
-    <footer>
-        <h3>Desenvolvido por Carlos Daniel Verdeiro &copy; - 2024 Sistema Web 2</h3>
-    </footer>
+    <?php include_once "../templates/footer.php"?>
 </body>
 
 </html>
