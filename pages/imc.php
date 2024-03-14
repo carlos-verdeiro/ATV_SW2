@@ -33,13 +33,13 @@
             <form action="imc.php" method="get" class="form">
                 <div class="inputContainer" id="iCPeso">
                     <label for="peso">Peso:</label>
-                    <input type="number" name="peso" id="peso" min="0.1 " required>
+                    <input placeholder="Kg" type="number" name="peso" id="peso" min="0.1 " max required>
                 </div>
                 <div class="inputContainer" id="iCAltura">
                     <label for="altura">Altura:</label>
-                    <input type="number" name="altura" id="altura" min="0.1 " required>
+                    <input placeholder="Metro" type="number" name="altura" id="altura" min="0.1 " required>
                 </div>
-                <input type="submit" value="Calcular"class="submit">
+                <input type="submit" value="Calcular" class="submit">
             </form>
         </section>
     </main>
