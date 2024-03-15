@@ -36,6 +36,10 @@ body {
             margin: 50px;
             box-shadow: 0px 0px 20px var(--cor2);
             padding: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
 
             & form {
                 width: 100%;
@@ -46,7 +50,7 @@ body {
                 justify-content: center;
                 text-align: center;
                 flex-direction: column;
-                
+
 
                 & .inputContainer {
                     display: flex;
@@ -85,30 +89,24 @@ body {
                     height: auto;
                     font-size: 25px;
                     transition-duration: 0.2s;
-                    cursor:pointer;
+                    cursor: pointer;
                 }
-                    
-                .submit:hover{
+
+                .submit:hover {
                     background-color: var(--cor2);
                     font-size: 27px;
-                    transition-property:font-size, background-color;
+                    transition-property: font-size, background-color;
                     transition-duration: 0.2s;
                     transition-timing-function: ease-in-out;
                     transition-delay: 0s;
                 }
             }
-        }
-    }
 
-    .tableImc{
-        max-width: 100%;
-        max-height: 50%;
-        border: var(--cor1) 1px solid;
-        background-color: var(--cor7);
-        border-radius: 10px;
-
-        & thead{
-            
+            & .h3Res {
+                font-size: 40px;
+                color: var(--cor7);
+                margin: 15px;
+            }
         }
     }
 }

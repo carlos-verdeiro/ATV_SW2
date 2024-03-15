@@ -60,24 +60,8 @@ if (isset($_GET['peso']) || isset($_GET['altura'])) {
             </form>
         </section>
         <section class="section">
-            <table class="tableImc">
-                <thead>
-                    <th>Baixo Peso</th>
-                    <th>Peso Ideal</th>
-                    <th>Levemente acima do Peso</th>
-                    <th>Obesidade I</th>
-                    <th>Obesidade II</th>
-                    <th>Obesidade III</th>
-                </thead>
-                <tbody>
-                    <td><18,5</td>
-                    <td>18,5 - 24,9</td>
-                    <td>25 - 29,9</td>
-                    <td>30 - 34,9</td>
-                    <td>35 - 39,9</td>
-                    <td>>40</td>
-                </tbody>
-            </table>
+            <h3 class="h3Res">Estado</h3>
+            <h3 class="h3Res">IMC: </h3>
         </section>
     </main>
     <?php include_once "../templates/footer.php"?>
