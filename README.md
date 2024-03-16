@@ -1,4 +1,4 @@
-**Tarefa de Escola: Sistema Web 2**
+# Tarefa de Escola: Sistema Web 2
 
 Este é o README para a tarefa de escola que consiste na implementação de um sistema web utilizando HTML, CSS e PHP. O sistema é composto por várias funcionalidades, cada uma representada por uma página específica. Abaixo, você encontrará uma descrição detalhada de cada página e sua funcionalidade.
 
