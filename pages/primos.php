@@ -47,6 +47,7 @@ if (isset($_GET['primos'])) {
     </header>
     <main class="main">
         <section class="section">
+            <h1 class="h1Title">Calcular Números Primos</h1>
             <form action="primos.php" method="get" class="form">
                 <div class="inputContainer" id="iCPeso">
                     <label for="peso">Primos até:</label>
@@ -62,14 +63,14 @@ if (isset($_GET['primos'])) {
             echo '<section class="section">';
             $primos = $_GET['primos'];
 
-            echo '<h3 class="h3Res">Números primos até '.$primos.':</h3>';
-            echo'<p class="pRes">';
+            echo '<h3 class="h3Res">Números primos até ' . $primos . ':</h3>';
+            echo '<p class="pRes">';
             for ($i = 2; $i <= $primos; $i++) {
                 if (primo($i)) {
                     echo "|$i ";
                 }
             }
-            echo'</p>';
+            echo '</p>';
             echo '</section>';
         }
         ?>

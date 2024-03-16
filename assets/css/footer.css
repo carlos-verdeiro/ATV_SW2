@@ -1,13 +1,13 @@
-footer{
+footer {
     background-color: var(--cor2);
     width: 100vw;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 
-    h3{
+
+    h3 {
         color: var(--cor7);
         text-align: center;
     }

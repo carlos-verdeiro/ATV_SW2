@@ -23,7 +23,7 @@ if (isset($_GET['peso']) || isset($_GET['altura']) || isset($_GET['sexo'])) {
                 $diferenca = $pesoIdeal - $peso;
             }
         }
-        
+
         $respondido = true;
     }
 }
@@ -62,6 +62,7 @@ if (isset($_GET['peso']) || isset($_GET['altura']) || isset($_GET['sexo'])) {
     </header>
     <main class="main">
         <section class="section">
+            <h1 class="h1Title">Calcular IMC</h1>
             <form action="imc.php" method="get" class="form">
                 <div class="inputContainer" id="iCDe">
                     <label>Sexo:</label>
@@ -74,8 +75,8 @@ if (isset($_GET['peso']) || isset($_GET['altura']) || isset($_GET['sexo'])) {
                         </div>
                         <div class="divRadio">
                             <input type="radio" name="sexo" id="mulher" value="mulher" <?php if ($mulher) {
-                                                                                        echo 'checked';
-                                                                                    } ?>>
+                                                                                            echo 'checked';
+                                                                                        } ?>>
                             <label for="mulher" class="labelRadio">Mulher</label>
                         </div>
                     </div>
@@ -129,14 +130,14 @@ if (isset($_GET['peso']) || isset($_GET['altura']) || isset($_GET['sexo'])) {
                 echo number_format($imc, 2);
             }
             echo '</h3>
-            <h3 class="h3Res">Peso ideal: ';
+            <h3 class="h3Res">Ideal para ', $altura, ' metros: ';
             if (isset($pesoIdeal)) {
-                echo number_format($pesoIdeal,1).' Kg';
+                echo number_format($pesoIdeal, 1) . ' Kg';
             }
             echo '</h3>
             <h3 class="h3Res">Ajuste necessário: ';
             if (isset($diferenca)) {
-                echo number_format($diferenca, 1).' Kg';
+                echo number_format($diferenca, 1) . ' Kg';
             }
             echo '</h3>
         </section>';

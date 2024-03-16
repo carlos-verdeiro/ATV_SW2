@@ -40,8 +40,9 @@ body {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            overflow-y:scroll;    
-            scrollbar-width: none; /* Firefox */        
+            overflow-y: scroll;
+            scrollbar-width: none;
+            /* Firefox */
 
             & form {
                 width: 100%;
@@ -76,22 +77,22 @@ body {
                         text-align: center;
                     }
 
-                    & .dadDivRadio{
+                    & .dadDivRadio {
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         flex-direction: row;
                         width: 100%;
-                        
 
-                        & .divRadio{
+
+                        & .divRadio {
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             flex-direction: row;
                             margin-inline: 15%;
 
-                            & .labelRadio{
+                            & .labelRadio {
                                 font-size: 25px;
                                 margin-left: 5px;
                             }
@@ -131,15 +132,22 @@ body {
                 font-size: 40px;
                 color: var(--cor7);
                 margin: 15px;
+                text-align: center;
             }
 
-            & .pRes{
+            & .pRes {
                 font-size: 20px;
                 color: var(--cor7);
                 height: 90%;
                 width: 100%;
+                text-align: center;
             }
 
+            & .h1Title {
+                color: var(--cor7);
+                font-weight: 600;
+                font-size: 30px;
+            }
 
         }
     }

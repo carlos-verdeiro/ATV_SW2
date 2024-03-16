@@ -22,17 +22,19 @@
 
                 </ul>
                 <ul id="linksDev">
-                    <li><a href="https://github.com/carlos-verdeiro" target="_blank"><?php include "assets/img/github.svg"?></a></li>
-                    <li><a href="https://www.linkedin.com/in/carlos-daniel-verdeiro/" target="_blank"><?php include "assets/img/linkedin.svg"?></a></li>
-                    <li><a href="https://carlos-verdeiro.github.io/" target="_blank"><?php include "assets/img/web.svg"?></a></li>
+                    <li><a href="https://github.com/carlos-verdeiro" target="_blank"><?php include "assets/img/github.svg" ?></a></li>
+                    <li><a href="https://www.linkedin.com/in/carlos-daniel-verdeiro/" target="_blank"><?php include "assets/img/linkedin.svg" ?></a></li>
+                    <li><a href="https://carlos-verdeiro.github.io/" target="_blank"><?php include "assets/img/web.svg" ?></a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-
+        <?php
+        include_once 'templates/selecaoAleatoria.php';
+        ?>
     </main>
-    <?php include_once "templates/footer.php"?>
+    <?php include_once "templates/footer.php" ?>
 </body>
 
 </html>

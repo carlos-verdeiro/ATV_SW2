@@ -64,6 +64,7 @@ if (isset($_GET['temp'])) {
     </header>
     <main class="main">
         <section class="section">
+            <h1 class="h1Title">Conversão de Temperaturas</h1>
             <form action="temperaturas.php" method="get" class="form">
                 <div class="inputContainer" id="iCDe">
                     <label>Converter para:</label>

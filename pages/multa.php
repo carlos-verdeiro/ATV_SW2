@@ -1,3 +1,20 @@
+<?php
+if (isset($_GET['peso'])) {
+    $peso = $_GET['peso'];
+    $pesoMax = 50;
+    $multa = 4;
+    if ($peso > $pesoMax) {
+        $excedente = (int) $peso - $pesoMax;
+        $valorMulta =  $excedente * $multa;
+        $multado = true;
+    } else {
+        $multado = false;
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -22,17 +39,43 @@
 
                 </ul>
                 <ul id="linksDev">
-                    <li><a href="https://github.com/carlos-verdeiro" target="_blank"><?php include "../assets/img/github.svg"?></a></li>
-                    <li><a href="https://www.linkedin.com/in/carlos-daniel-verdeiro/" target="_blank"><?php include "../assets/img/linkedin.svg"?></a></li>
-                    <li><a href="https://carlos-verdeiro.github.io/" target="_blank"><?php include "../assets/img/web.svg"?></a></li>
+                    <li><a href="https://github.com/carlos-verdeiro" target="_blank"><?php include "../assets/img/github.svg" ?></a></li>
+                    <li><a href="https://www.linkedin.com/in/carlos-daniel-verdeiro/" target="_blank"><?php include "../assets/img/linkedin.svg" ?></a></li>
+                    <li><a href="https://carlos-verdeiro.github.io/" target="_blank"><?php include "../assets/img/web.svg" ?></a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
+        <section class="section">
+            <h1 class="h1Title">Calcular Multa</h1>
+            <form action="multa.php" method="get" class="form">
+                <div class="inputContainer" id="iCTemp">
+                    <label for="peso">Peso do peixe:</label>
+                    <input placeholder="Kg" type="number" step="0.01" name="peso" id="peso" min="0" value="<?php if (isset($peso)) {
+                                                                                                                echo $peso;
+                                                                                                            } ?>" required>
+                </div>
+                <input type="submit" value="Verificar" class="submit">
+            </form>
+        </section>
 
+        <?php
+        if (isset($_GET['peso'])) {
+            echo '<section class="section">';
+
+            echo '<h3 class="h3Res">Peso do peixe: ' . number_format($peso, 1) . ' Kg</h3>';
+            if ($multado) {
+                echo '<h3 class="h3Res">Quilos excedido: ' . $excedente . ' Kg</h3>';
+                echo '<h3 class="h3Res">Valor da multa: R$' . number_format($valorMulta, 2) . '</h3>';
+                echo '<p class="pRes">Peso limite: ' . $pesoMax . 'Kg</p>';
+                echo '<p class="pRes">Valor da multa por quilo: R$' . number_format($multa, 2) . '</p>';
+            }
+            echo '</section>';
+        }
+        ?>
     </main>
-    <?php include_once "../templates/footer.php"?>
-</body>     
+    <?php include_once "../templates/footer.php" ?>
+</body>
 
 </html>
