@@ -1,7 +1,7 @@
-**Tarefa de Escola: Sistema Web 2**
+# Tarefa de Escola: Sistema Web 2
 
 Este é o README para a tarefa de escola que consiste na implementação de um sistema web utilizando HTML, CSS e PHP. O sistema é composto por várias funcionalidades, cada uma representada por uma página específica. Abaixo, você encontrará uma descrição detalhada de cada página e sua funcionalidade.
-
+---
 ### Estrutura do Projeto:
 
 O projeto está estruturado da seguinte forma:
@@ -12,8 +12,8 @@ O projeto está estruturado da seguinte forma:
 - **pages/imc.php**: Página para calcular o Índice de Massa Corporal (IMC) com base no peso, altura e sexo.
 - **pages/temperaturas.php**: Página para converter temperaturas entre Celsius e Fahrenheit.
 
-Além disso, o projeto inclui arquivos de estilo CSS, imagens e scripts PHP necessários para o funcionamento correto das páginas.
-
+#### Além disso, o projeto inclui arquivos de estilo CSS, imagens e scripts PHP necessários para o funcionamento correto das páginas.
+---
 ### Funcionalidades:
 
 1. **Multa (pages/multa.php)**:
@@ -35,7 +35,7 @@ Além disso, o projeto inclui arquivos de estilo CSS, imagens e scripts PHP nece
    - **Descrição**: Página para converter temperaturas entre Celsius e Fahrenheit.
    - **Uso**: Escolha a unidade de temperatura desejada (Celsius ou Fahrenheit), insira a temperatura a ser convertida e clique em "Calcular".
    - **Funcionamento**: Dependendo da escolha do usuário, o PHP nesta página converte a temperatura para a unidade selecionada e exibe o resultado.
-
+---
 ### Desenvolvimento:
 
 - O projeto foi desenvolvido por Carlos Daniel Verdeiro.
