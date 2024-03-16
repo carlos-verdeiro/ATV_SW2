@@ -50,19 +50,56 @@ if (isset($_GET['peso']) || isset($_GET['altura'])) {
             <form action="imc.php" method="get" class="form">
                 <div class="inputContainer" id="iCPeso">
                     <label for="peso">Peso:</label>
-                    <input placeholder="Kg" type="number" step="0.01" name="peso" id="peso" min="0.1 " max required>
+                    <input placeholder="Kg" type="number" step="0.01" name="peso" id="peso" min="0.1 " value="<?php if (isset($peso)) {
+                        echo $peso;
+                    }?>" required>
                 </div>
                 <div class="inputContainer" id="iCAltura">
                     <label for="altura">Altura:</label>
-                    <input placeholder="Metro" type="number" step="0.01" name="altura" id="altura" min="    1 " required>
+                    <input placeholder="Metro" type="number" step="0.01" name="altura" id="altura" min="1" value="<?php if (isset($altura)) {
+                        echo $altura;
+                    }?>" required>
                 </div>
                 <input type="submit" value="Calcular" class="submit">
             </form>
         </section>
-        <section class="section">
-            <h3 class="h3Res">Estado</h3>
-            <h3 class="h3Res">IMC: </h3>
-        </section>
+        <?php
+        if ($respondido) {
+            
+        
+        echo '<section class="section">
+            <h3 class="h3Res">
+                ';
+                switch($imc){
+                    case ($imc <=18.5):
+                        echo "Abaixo do peso!";
+                        break;
+                    case ($imc >= 18.5 && $imc < 25):
+                        echo "Peso ideal!";
+                        break;
+                    case ($imc >= 25 && $imc < 30):
+                        echo "Levemente acima do peso!";
+                        break;
+                    case ($imc >= 30 && $imc < 35):
+                        echo "Obesidade Grau 1!";
+                        break;
+                    case ($imc >= 35 && $imc < 40):
+                        echo "Obesidade Grau 2! (Severa)";
+                        break;
+                    case ($imc >= 40):
+                        echo "Obesidade Grau 3! (Mórbida)";
+                        break;                           
+                }
+            echo'
+            </h3>
+            <h3 class="h3Res">IMC: ';
+            if (isset($imc)){
+                echo number_format($imc,2);
+            }
+            echo'</h3>
+        </section>';
+        }
+        ?>
     </main>
     <?php include_once "../templates/footer.php"?>
 </body>
