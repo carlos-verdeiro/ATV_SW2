@@ -32,6 +32,7 @@ if (isset($_GET['temp'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="shortcut icon" href="../assets/img/temp.ico" type="image/x-icon">
     <title>Temperaturas</title>
 </head>
 

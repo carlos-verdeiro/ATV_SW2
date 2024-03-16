@@ -21,6 +21,7 @@ if (isset($_GET['primos'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="shortcut icon" href="../assets/img/number.ico" type="image/x-icon">
     <title>Primos</title>
 </head>
 
