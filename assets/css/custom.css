@@ -40,6 +40,8 @@ body {
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            overflow-y:scroll;    
+            scrollbar-width: none; /* Firefox */        
 
             & form {
                 width: 100%;
@@ -129,6 +131,13 @@ body {
                 font-size: 40px;
                 color: var(--cor7);
                 margin: 15px;
+            }
+
+            & .pRes{
+                font-size: 20px;
+                color: var(--cor7);
+                height: 90%;
+                width: 100%;
             }
 
 
