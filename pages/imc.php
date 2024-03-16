@@ -109,7 +109,7 @@ if (isset($_GET['peso']) || isset($_GET['altura']) || isset($_GET['sexo'])) {
                     echo "Abaixo do peso!";
                     break;
                 case ($imc >= 18.5 && $imc < 25):
-                    echo "Peso ideal!";
+                    echo "Peso adequado!";
                     break;
                 case ($imc >= 25 && $imc < 30):
                     echo "Levemente acima do peso!";
