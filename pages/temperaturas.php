@@ -1,25 +1,27 @@
 <?php
 $respondido = false;
-if (isset ($_GET['para']) || isset ($_GET['de']) || isset ($_GET['temp'])) {
-    if (isset ($_GET['para'])) {
-        $para = $_GET['para'];
-    }
-    if (isset ($_GET['de'])) {
-        $de = $_GET['de'];
-    }
-    if (isset ($_GET['temp'])) {
-        $temp = $_GET['temp'];
-    }
-    if (isset ($_GET['tipo']) && isset ($_GET['temp'])) {
-        if ($para == 'celsius' && $de == 'fare') {
-            $res = ($temp * 1.8) + 32;
-            $respondido = true;
-        } else if ($para == 'fare' && $de == 'celsius') {
-            $res = ($temp - 32) / 1.8;
-            $respondido = true;
-        }
+$celsius = false;
+$fare = false;
+
+if (isset($_GET['for'])) {
+    if ($_GET['for'] == 'celsius') {
+        $celsius = true;
+    } else {
+        $fare = true;
     }
 }
+
+if (isset($_GET['temp'])) {
+    $temp = $_GET['temp'];
+    if ($fare) {
+        $res = ($temp * 1.8) + 32;
+        $respondido = true;
+    } else if ($celsius) {
+        $res = ($temp - 32) / 1.8;
+        $respondido = true;
+    }
+}
+
 
 ?>
 
@@ -62,25 +64,29 @@ if (isset ($_GET['para']) || isset ($_GET['de']) || isset ($_GET['temp'])) {
     </header>
     <main class="main">
         <section class="section">
-            <form action="imc.php" method="get" class="form">
-                <div class="inputContainer" id="iCPeso">
-                    <label>Para:</label>
+            <form action="temperaturas.php" method="get" class="form">
+                <div class="inputContainer" id="iCDe">
+                    <label>Converter para:</label>
                     <div class="dadDivRadio">
                         <div class="divRadio">
-                            <input type="radio" name="tipo" id="celsius">
+                            <input type="radio" name="for" id="celsius" value="celsius" <?php if ($celsius) {
+                                                                                            echo 'checked';
+                                                                                        } ?>>
                             <label for="celsius" class="labelRadio">Celsius</label>
                         </div>
                         <div class="divRadio">
-                            <input type="radio" name="tipo" id="fare">
+                            <input type="radio" name="for" id="fare" value="fare" <?php if ($fare) {
+                                                                                        echo 'checked';
+                                                                                    } ?>>
                             <label for="fare" class="labelRadio">Fahrenheit</label>
                         </div>
                     </div>
                 </div>
-                <div class="inputContainer" id="iCAltura">
+                <div class="inputContainer" id="iCTemp">
                     <label for="altura">Temperatura:</label>
-                    <input placeholder="Digite" type="number" step="0.01" name="temp" id="temp" min="1" value="<?php if (isset ($temp)) {
-                        echo $temp;
-                    } ?>" required>
+                    <input placeholder="Digite" type="number" step="0.01" name="temp" id="temp" min="1" value="<?php if (isset($temp)) {
+                                                                                                                    echo $temp;
+                                                                                                                } ?>" required>
                 </div>
                 <input type="submit" value="Calcular" class="submit">
             </form>
@@ -89,8 +95,7 @@ if (isset ($_GET['para']) || isset ($_GET['de']) || isset ($_GET['temp'])) {
         <?php
         if ($respondido) {
             echo '<section class="section">';
-            echo '<h3 class="h3Res">Temperatura</h3>';
-            echo '<h3 class="h3Res">Resultado</h3>';
+            echo '<h3 class="h3Res">' . number_format($res, 2) . 'º' . $retVal = ($celsius) ? 'C' : 'F' . '</h3>';
             echo '</section>';
         }
         ?>
