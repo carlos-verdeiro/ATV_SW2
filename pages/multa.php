@@ -65,10 +65,16 @@ if (isset($_GET['peso'])) {
         if (isset($_GET['peso'])) {
             echo '<section class="section">';
 
-            echo '<h3 class="h3Res">Peso do peixe: ' . number_format($peso, 1) . ' Kg</h3>';
             if ($multado) {
+                echo '<h3 class="h3Res">REPROVADO</h3>';
+                echo '<h3 class="h3Res">Peso do peixe: ' . number_format($peso, 1) . ' Kg</h3>';
                 echo '<h3 class="h3Res">Quilos excedido: ' . $excedente . ' Kg</h3>';
                 echo '<h3 class="h3Res">Valor da multa: R$' . number_format($valorMulta, 2) . '</h3>';
+                echo '<p class="pRes">Peso limite: ' . $pesoMax . 'Kg</p>';
+                echo '<p class="pRes">Valor da multa por quilo: R$' . number_format($multa, 2) . '</p>';
+            }else{
+                echo '<h3 class="h3Res">APROVADO</h3>';
+                echo '<h3 class="h3Res">Peso do peixe: ' . number_format($peso, 1) . ' Kg</h3>';
                 echo '<p class="pRes">Peso limite: ' . $pesoMax . 'Kg</p>';
                 echo '<p class="pRes">Valor da multa por quilo: R$' . number_format($multa, 2) . '</p>';
             }

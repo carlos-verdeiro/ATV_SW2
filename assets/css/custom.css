@@ -138,9 +138,12 @@ body {
             & .pRes {
                 font-size: 20px;
                 color: var(--cor7);
-                height: 90%;
                 width: 100%;
                 text-align: center;
+            }
+
+            .h-90{
+                height: 90%;
             }
 
             & .h1Title {

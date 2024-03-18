@@ -65,7 +65,7 @@ if (isset($_GET['primos'])) {
             $primos = $_GET['primos'];
 
             echo '<h3 class="h3Res">Números primos até ' . $primos . ':</h3>';
-            echo '<p class="pRes">';
+            echo '<p class="pRes h-90">';
             for ($i = 2; $i <= $primos; $i++) {
                 if (primo($i)) {
                     echo "|$i ";
